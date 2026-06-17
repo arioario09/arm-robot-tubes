@@ -15,11 +15,18 @@ pcb/
 armrobot (2)/
 armrobot/
 armrobot - Copy/
+3d/
+
+
 
 # Arduino/PlatformIO
 *.elf
+*.cpp
+*.h
 *.hex
 *.bin
+*.step
+*.stl
 *.eep
 *.map
 *.dmp
