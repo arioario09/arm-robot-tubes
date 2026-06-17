@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+.Python
+python-env/
+
+# VS Code
+.vscode/
+pcb/
+armrobot (2)/
+armrobot/
+armrobot - Copy/
+
+# Arduino/PlatformIO
+*.elf
+*.hex
+*.bin
+*.eep
+*.map
+*.dmp
+*.zip
+*.tar.gz
+*.tmp
+*.build/
+*.pio/
+*.cache/
+*.log
+
+# KiCad
+*.kicad_pro
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_doc
+*.kicad_wks
+*.kicad_prl
+*.pro
+*.bkp
+*.bak
+*.tmp
+*.log
+fp-info-cache/
+*.kicad_pcb-wks*
+*.kicad_mod
+*.kicad_sym
