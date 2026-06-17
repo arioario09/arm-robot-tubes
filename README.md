@@ -49,6 +49,7 @@ pip install -r requirements.txt
 ### 3. Koneksi Hardware
 
 **Servo Motor:**
+
 - Servo 1 (Base) → Pin 9
 - Servo 2 (Shoulder) → Pin 10
 - Servo 3 (Elbow) → Pin 11
@@ -76,18 +77,22 @@ python robot_arm_controller.py
 ### 3. Kontrol Robot
 
 **Menggunakan Slider:**
+
 - Geser slider untuk mengubah sudut setiap axis
 - Visualisasi akan update secara real-time
 
 **Menggunakan Tombol:**
+
 - `-5°` / `+5°` - Adjust sudut dengan increment 5 derajat
 - `-1°` / `+1°` - Adjust sudut dengan increment 1 derajat (kontrol presisi)
 
 **Kirim ke Robot:**
+
 - Klik **"Send to Robot"** untuk mengirim posisi ke hardware
 - Robot akan bergerak ke posisi yang ditampilkan di visualisasi
 
 **Reset Position:**
+
 - Klik **"Reset Position"** untuk kembali ke posisi home (90°, 90°, 90°)
 
 ### 4. Monitor Posisi
@@ -103,12 +108,13 @@ A1:<angle>,A2:<angle>,A3:<angle>\n
 ```
 
 **Contoh:**
+
 ```
 A1:25,A2:40,A3:30\n
 ```
 
 - `A1` = Sudut axis 1 (Base)
-- `A2` = Sudut axis 2 (Shoulder)  
+- `A2` = Sudut axis 2 (Shoulder)
 - `A3` = Sudut axis 3 (Elbow)
 - Sudut dalam range 0-180 derajat
 - Diakhiri dengan newline `\n`
@@ -153,6 +159,23 @@ void moveServoSmooth(Servo &servo, int currentAngle, int targetAngle) {
     delay(15);  // Ubah nilai delay (ms) untuk kecepatan berbeda
 }
 ```
+
+## Mengabaikan Folder `3d` dari Git
+
+Jika folder `3d` berisi file besar yang tidak ingin Anda push, pastikan baris ini ada di `.gitignore`:
+
+```gitignore
+3d/
+```
+
+Jika folder `3d` sudah pernah ditambahkan ke Git sebelumnya, jalankan:
+
+```bash
+git rm -r --cached "3d"
+git commit -m "Stop tracking 3d folder"
+```
+
+Setelah itu, Git akan mengabaikan semua isi `3d/`.
 
 ## Troubleshooting
 
