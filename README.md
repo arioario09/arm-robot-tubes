@@ -1,4 +1,4 @@
-# Robot Arm Controller
+# Rancang Bangun Sistem Robotic Manipulator System (RMS) Berbasis ESP32 dengan GUI Python untuk Operasi Pick and Place
 
 Aplikasi GUI berbasis Python Tkinter untuk mengontrol robot arm 3-axis dengan visualisasi 3D real-time.
 
@@ -6,7 +6,7 @@ Aplikasi GUI berbasis Python Tkinter untuk mengontrol robot arm 3-axis dengan vi
 
 ✅ **Kontrol 3 Axis** - Kontrol Base (θ1), Shoulder (θ2), dan Elbow (θ3)
 ✅ **Visualisasi 3D Real-time** - Melihat pergerakan robot secara visual
-✅ **Komunikasi Serial** - Kirim perintah ke Arduino/mikrokontroler
+✅ **Komunikasi Serial** - Kirim perintah ke ESP32
 ✅ **Tombol Kontrol** - Slider dan tombol increment untuk kontrol presisi
 ✅ **Forward Kinematics** - Menampilkan posisi end effector (X, Y, Z)
 ✅ **Multiple Port Support** - Deteksi otomatis port serial yang tersedia
@@ -48,12 +48,12 @@ pip install -r requirements.txt
 
 ### 3. Koneksi Hardware
 
-**Servo Motor:**
+**Stepper Motor:**
 
-- Servo 1 (Base) → Pin 9
-- Servo 2 (Shoulder) → Pin 10
-- Servo 3 (Elbow) → Pin 11
-- VCC → 5V (atau power supply eksternal untuk servo besar)
+- Stepper 1 (Base) → Pin 9
+- Stepper 2 (Shoulder) → Pin 10
+- Stepper 3 (Elbow) → Pin 11
+- VCC → 5V (atau power supply eksternal untuk stepper besar)
 - GND → GND
 
 ⚠️ **Catatan:** Untuk servo dengan torsi besar, gunakan power supply eksternal (5-6V) yang terpisah dari Arduino. Pastikan ground power supply terhubung dengan ground Arduino.
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 ### 1. Jalankan Aplikasi
 
 ```bash
-python robot_arm_controller.py
+python robot_arm_controllerv.py
 ```
 
 ### 2. Koneksi Serial
